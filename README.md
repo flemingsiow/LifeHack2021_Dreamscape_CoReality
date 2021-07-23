@@ -15,14 +15,13 @@ Welcome! We are a team of Year 2 students from Singapore Polytechnic, consisting
 Link to our Video Pitch: [CoReality]()
 
 ## Getting Started
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
 
 1. Navigate to the ```myapp``` folder.
 2. If you haven't installed Meteor on your OS, the installation instructions can be found [here](https://guide.meteor.com/).
 3. Install the relevant npm packages: ```meteor npm install```. (You would require NodeJS for this. Download [here](https://nodejs.org/en/download/))
 
 ## Running the Test
-1. Once Meteor has started up successfully, you can view the application locally on [localhost:3000](http://www.localhost:3000) or otherwise try the deployed live demo.
+Once Meteor has started up successfully, you can view the application locally on [localhost:3000](http://www.localhost:3000) or otherwise try the deployed live demo.
 
 ## Live Demo
 [Live Demo]()
