@@ -1,0 +1,31 @@
+<template name="CourseCard">
+	<div class="course-card">
+		{{#if course}}
+		<div class="card">
+			<div class="card-content">
+				<div class="card-title flex-container">
+					<div class="course-title">
+						<p>{{course.title}} {{course.code}}</p>
+						<p class="card-subtitle">Instructor: {{#with getCourseOwner course.code}}{{profile.first_name}} {{profile.last_name}}{{/with}}</p>
+					</div>
+					{{#if userIsCourseInstructor course.code}}
+						<div class="course-size">
+							<a id="class-size-tooltip" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Class Size">
+								<img src="/icons/people.svg">
+								<span>{{numberOfEnrolledStudent course.code}}</span>
+							</a>
+						</div>
+					{{/if}}
+				</div>
+				<p>{{course.description}}</p>
+			</div>
+			<div class="card-action">
+				<a class="waves-effect waves-teal btn-flat" href="/course/{{course.code}}">View</a>
+				{{#if userIsCourseInstructor course.code}}
+					<button class="waves-effect waves-teal btn-flat modal-trigger remove-course-modal-trigger" type="button" id="{{course.code}}">Remove</button>
+				{{/if}}
+			</div>
+		</div>
+		{{/if}}
+	</div>
+</template>

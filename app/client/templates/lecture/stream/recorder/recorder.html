@@ -1,0 +1,20 @@
+<template name="Recorder">
+	<div class="recorder">
+		<p>Please record your question</p>
+		<form class="recorder-form">
+			<button id="recorder-toggle" class="waves-effect waves-light btn-flat" type="button">
+				<img class="{{#if isRecording}}active-blink{{/if}}" src="/icons/mic.svg">
+			</button>
+			{{#if getAudioLevel}}<p>Audio Level: {{getAudioLevel}}</p>{{/if}}
+			{{#if showPlayer}}
+				<audio id="player" controls src={{getAudioURL}}></audio>
+			{{/if}}
+            <textarea name="textarea" class="materialize-textarea" id="textBox"></textarea>
+            <div class="row">
+                <div class="btn-flat" id="recorder-confidence">Average Confidence: 0%</div>
+                <button class="waves-effect waves-light btn-flat" type="button" id="recorder-cancel">Cancel</button>
+				<button class="waves-effect waves-light btn-flat" type="button" id="recorder-submit">Submit</button>
+			</div>
+		</form>
+	</div>
+</template>

@@ -1,0 +1,47 @@
+<template name="MasterLayout">
+	<ul id="dropdown-menu" class="dropdown-content">
+		{{#if currentUser}}
+			{{#unless route_is '/'}}
+				<li><a href="/"><img src="/icons/profile.svg">Home</a></li>
+			{{/unless}}
+			{{#unless route_is '/settings'}}
+			<li><a href="/settings"><img src="/icons/setting.svg">Settings</a></li>
+			{{/unless}}
+			<li><a href="#" id="logout"><img src="/icons/unlock.svg" class="menu-icon">Logout</a></li>
+		{{else}}
+			<li><a class="modal-trigger" href="#login-modal" id="login-modal-trigger">Login</a></li>
+			<li><a class="modal-trigger" href="#register-modal" id="register-modal-trigger">Register</a></li>
+		{{/if}}
+	</ul>
+	<nav id="nav" style={{hideInStream}}>
+		<div class="nav-wrapper">
+			<a href="/" class="brand-logo"><img class="logo" src="/icons/cardboard.png"></a>
+			<div class="breadcrumb-container">
+				{{#if onCoursePage}}
+					<a href="/course/{{onCoursePage}}" class="breadcrumb">{{onCoursePage}}</a>
+				{{/if}}
+				{{#if onLecturePage}}
+					<a href="/course/{{onCoursePage}}/{{onLecturePage}}" class="breadcrumb">{{onLecturePage}}</a>
+				{{/if}}
+				{{#if route_is "/settings"}}
+					<a href="/Settings" class="breadcrumb">Settings</a>
+				{{/if}}
+			</div>
+			<ul id="nav-mobile" class="right">
+				<li><a id="dropdown-button" class="dropdown-button" href="" data-activates="dropdown-menu" data-beloworigin="true" data-alignment="right"><img src="/icons/setting.svg" class="spin"></a></li>
+			</ul>
+		</div>
+	</nav>
+	{{#unless currentUser}}
+	<div id="login-modal" class="modal">
+		{{> Login}}
+	</div>
+	<div id="register-modal" class="modal">
+		{{> Register}}
+	</div>
+	{{/unless}}
+	<div class="master-main">
+		{{> yield}}
+	</div>
+	{{> Footer}}
+</template>

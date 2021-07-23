@@ -1,0 +1,19 @@
+
+/* Question: Style */
+
+.question {
+	span {
+		font-size: 14px;
+		color: grey;
+		font-weight: 400;
+	}
+	.play-button {
+		background-color: #7163a8 !important;
+		&:hover {
+			cursor: pointer;
+		}
+	}
+	.read-status {
+		cursor: pointer;
+	}
+}

@@ -1,0 +1,49 @@
+<template name="Settings">
+	<div class="main settings">
+		<div class="innerMain">
+			<div class="card">
+				{{#with currentUser}}
+				<form class="edit-personal-information">
+					<div class="card-content">
+						<div class="card-title">
+							<p>Personal Information</p>
+						</div>
+						<div class="avatar-container">
+							<img class="avatar" src={{getSelectedAvatar}}>
+							<div class="avatar-selector row">
+								{{#each getAvatars}}
+									<button class="avatar-btn btn-flat {{isSelectedAvatar _id}}" type="button"><img src={{url}}></button>
+								{{/each}}
+							</div>
+						</div>
+						
+						<div class="flex-container">
+							<div class="input-field left-item">
+								<input id="firstName" name="firstName" type="text" value="{{profile.first_name}}">
+								<label id="firstName-label" class="active" for="firstName">First Name</label>
+							</div>
+							<div class="input-field right-item">
+								<input id="lastName" name="lastName" type="text" value="{{profile.last_name}}">
+								<label id="lastName-label" class="active" for="lastName">Last Name</label>
+							</div>
+						</div>
+					</div>
+					<div class="card-action">
+						<button class="waves-effect waves-teal btn-flat" type="button" id="cancel">Cancel</button>
+						<button class="waves-effect waves-teal btn-flat" type="button" id="confirm-modal-trigger">Change</button>
+					</div>
+				</form>
+				{{/with}}
+			</div>
+			<div id="edit-personal-modal" class="modal">
+				<div class="modal-content">
+					<p>Are you sure you want to change your personal information?</p>
+				</div>
+				<div class="modal-footer">
+					<button class="waves-effect waves-teal btn-flat" type="button" id="confirm-cancel">Cancel</button>
+					<button class="waves-effect waves-teal btn-flat" type="submit" id="confirm-change">Confirm</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>

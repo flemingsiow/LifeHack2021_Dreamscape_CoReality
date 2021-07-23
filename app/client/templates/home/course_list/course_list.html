@@ -1,0 +1,47 @@
+<template name="CourseList">
+	<div class="course-list">
+		<div class="search-bar search-wrapper card">
+			<input id="search" placeholder="Search course">
+			<i class="material-icons left">search</i>
+		</div>
+		{{#if userIsInstructor}}
+			<div class="fixed-action-btn">
+				<a href="/create_new_course" class="btn-floating btn-large blue">
+					<i class="large material-icons">add</i>
+				</a>
+			</div>
+		{{/if}}
+		{{#if courses}}
+            {{#if userIsInstructor}}
+                <div class="card-action">
+                    <p>Courses Taught by You</p>
+                </div>
+            {{else}}
+                <div class="card-action">
+                    <p>Your Enrolled Courses</p>
+                </div>
+            {{/if}}
+			{{#each relatedCourses}}
+				{{> CourseCard courseId=_id}}
+			{{/each}}
+		{{else}}
+			{{#if userIsInstructor}}
+				<p>There are no course available yet. Please create a course</p>
+			{{else}}
+				<p>No course is available right now. Please ask your instructor to enroll you into a course</p>
+			{{/if}}
+		{{/if}}
+	</div>
+	<div id="remove-course-modal" class="modal">
+		{{#if userIsInstructor}}
+		<div class="modal-content">
+			<h3>Remove course {{getSelectedCourseCode}}</h3>
+			<p>Are you sure you want to remove this course?</p>
+		</div>
+		<div class="modal-footer row button-row">
+			<button class="waves-effect waves-light modal-action btn-flat" type="button" id="remove-course-cancel">Cancel</button>
+			<button class="waves-effect waves-light modal-action btn-flat" type="button" id="confirm-remove">Confirm</button>
+		</div>
+		{{/if}}
+	</div>
+</template>

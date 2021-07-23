@@ -1,0 +1,29 @@
+
+/* Settings: Style */
+
+.settings {
+	.edit-personal-information {
+		.avatar-container {
+			text-align: center;
+			.avatar {
+				width: 35%;
+				height: 35%;
+				max-width: 250px;
+				margin: 0 auto;
+			}
+		}
+		.avatar-selector {
+			margin: 0 auto 10px;
+			.avatar-btn {
+				width: 65px;
+				height: 65px;
+				padding: 10px;
+				border-radius: 0;
+				&.selected {
+					border-bottom: 1px solid #7163a8;
+					box-shadow: 0 1px 0 0 #7163a8;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,40 @@
+
+/* Course: Style */
+
+.course {
+	.course-title-container {
+		.left-item {
+			flex:1;
+			margin:0;
+		}
+		.course-size {
+			cursor:default;
+			img {
+				width:15px;
+				height:15px;
+			}
+			span {
+				color:initial;
+				font-size: 0.8em;
+				vertical-align: super;
+				margin-left:-2px;
+				color: grey;
+			}
+		}
+	}
+	.lecture-list {
+		margin: 20px 0;
+		.collection-header {
+			p {
+				margin: 0;
+				font-weight: 300;
+			}
+		}
+		.collection-item {
+			@media only screen and (min-width:400px) {
+				display:flex;
+			}
+			padding: 10px 20px;
+		}
+	}
+}

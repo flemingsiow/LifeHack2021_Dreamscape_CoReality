@@ -1,0 +1,28 @@
+
+/* Footer: Style */
+
+.footer {
+	.page-footer {
+		padding:0;
+		background-color:#7163a8;
+		.footer-copyright {
+			.container {
+				max-width: 760px;
+			}
+			a {
+				img {
+					width:25px;
+					height:25px;
+					vertical-align: middle;
+					opacity:0.8;
+					-webkit-transition:0.5s ease all;
+					-moz-transition:0.5s ease all; 
+					transition:0.5s ease all; 
+					&:hover {
+						opacity:1;
+					}
+				}
+			}
+		}
+	}
+}
