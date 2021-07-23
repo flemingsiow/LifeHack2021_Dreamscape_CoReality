@@ -19,6 +19,7 @@ Link to our Video Pitch: [CoReality]()
 1. Navigate to the ```myapp``` folder.
 2. If you haven't installed Meteor on your OS, the installation instructions can be found [here](https://guide.meteor.com/).
 3. Install the relevant npm packages: ```meteor npm install```. (You would require NodeJS for this. Download [here](https://nodejs.org/en/download/))
+4. After the packages has been installed, you can initiate our web application by simply entering: ```meteor```
 
 ## Running the Test
 Once Meteor has started up successfully, you can view the application locally on [localhost:3000](http://www.localhost:3000) or otherwise try the deployed live demo.
