@@ -27,6 +27,14 @@ Once Meteor has started up successfully, you can view the application locally on
 ## Live Demo
 [Live Demo]()
 
+## Built With
+- MeteorJS
+- NodeJS
+- React
+- A-Frame
+- Web Speech API
+- WebRTC
+
 ## Versioning
 We use [SemVer](https://semver.org) for versioning.
 
