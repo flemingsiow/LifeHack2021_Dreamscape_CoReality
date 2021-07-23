@@ -17,12 +17,6 @@ Link to our Video Pitch: [CoReality]()
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
 
-### Prerequisites
-1. Download a copy of our repository on your local machine.
-
-### Installing
-Now you are ready to run MeteorJS Framework.
-
 1. Navigate to the ```myapp``` folder.
 2. If you haven't installed Meteor on your OS, the installation instructions can be found [here](https://guide.meteor.com/).
 3. Install the relevant npm packages: ```meteor npm install```. (You would require NodeJS for this. Download [here](https://nodejs.org/en/download/))
