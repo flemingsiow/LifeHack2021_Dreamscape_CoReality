@@ -25,7 +25,7 @@ Link to our Video Pitch: [CoReality](https://youtu.be/gsPpSnuqM3E)
 Once Meteor has started up successfully, you can view the application locally on [localhost:3000](http://www.localhost:3000) or otherwise try the deployed live demo.
 
 ## Live Demo
-[Live Demo]()
+Instance has been shut down
 
 ## Built With
 - MeteorJS
