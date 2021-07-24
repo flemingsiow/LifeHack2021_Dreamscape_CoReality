@@ -12,7 +12,7 @@ Welcome! We are a team of Year 2 students from Singapore Polytechnic, consisting
 > Our solution, CoReality, allows schools, universities or institutions to easily create a unified user interface for students and teachers to interact across different courses. Furthermore, with Virtual Reality (VR) technology, we were able to create a visual workspace such as a classroom or meeting room using 360° cameras to record the area and streamed through the Internet. This creates a unique and immersive experience for students and teachers to converse and learn online all while at the comforts of their home—safe from the virus.
 
 ## Demo Video
-Link to our Video Pitch: [CoReality]()
+Link to our Video Pitch: [CoReality](https://youtu.be/gsPpSnuqM3E)
 
 ## Getting Started
 
