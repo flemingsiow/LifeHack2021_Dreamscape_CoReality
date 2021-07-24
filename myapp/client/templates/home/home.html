@@ -1,0 +1,28 @@
+<template name="Home">
+	<div class="home">
+		{{#if currentUser}}
+			<div class="main">
+				<div class="innerMain">
+					{{> ActiveLectureList}}
+					{{> CourseList}}
+				</div>
+			</div>
+		{{else}}
+			<div class="parallax-container valign-wrapper">
+				<h1>CoReality</h1>
+				<div class="parallax"><img src="{{background_image}}"></div>
+			</div>
+			<div class="main">
+				<div class="innerMain">
+					<div class="welcome">
+						<p>
+							The Covid-19 pandemic has introduced uncertainty into major aspects of national and global society, including  schools. As the virus continues to rampage across the world, making informed decisions about whether and when to return to in-person instruction remains challenging and dangerous. 
+
+							However with our product, CoReality, it is now possible to visualise a workspace, be it a classroom, meeting room or office using 360° cameras to record the area and streamed through the Internet. This creates a unique and immersive experience for students while keeping them safe from the virus.
+						</p>
+					</div>
+				</div>
+			</div>
+		{{/if}}
+	</div>
+</template>
